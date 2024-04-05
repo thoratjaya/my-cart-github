@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Product catalogue</a>
+    <form class="form-inline">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="goToCart()">Cart</button>
+    </form>
+  </nav>
+<div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let product of products">
+        <div class="card mb-4">
+          <img class="card-img-top" [src]="product.image" [alt]="product.name" width="50 px" height="110 px">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">Weight: {{ product.weight }}</p>
+            <p class="card-text">Price: {{ product.price }}</p>
+            <div *ngIf="isInCart(product)">
+              <button class="btn btn-sm btn-danger" (click)="removeFromCart(product)">-</button>
+              <span>{{ getProductQuantity(product) }}</span>
+              
+              <button class="btn btn-sm btn-success" (click)="addToCart(product)">+</button>
+            </div>
+            <button *ngIf="!isInCart(product)" class="btn btn-sm btn-primary" (click)="addToCart(product)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+  

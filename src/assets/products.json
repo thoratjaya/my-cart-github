@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+      "name": "Oil",
+      "image": "assets/images/oil.jpg",
+      "weight": "15 liter",
+      "price": 2000
+    },
+    {
+      "id":2,
+      "name": "Poha",
+      "image": "assets/images/poha.jpg",
+      "weight": "1 kg",
+      "price": 200
+    },
+    {
+      "id":3,
+      "name": "Rava",
+      "image": "assets/images/rava.jpg",
+      "weight": "500 gm",
+      "price": 100
+    }
+  ]

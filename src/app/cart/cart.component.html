@@ -1,0 +1,16 @@
+<div *ngIf="cartItems.length > 0; else noProducts">
+    <div *ngFor="let items of cartItems">
+      <div>
+        <h3>{{ items.product.name }}</h3>
+        <p>Price: {{ items.product.price }}</p>
+        <p>Price: {{ items.quantity }}</p>
+      </div>
+    </div>
+    <div>
+      <p>Total Price: {{ totalPrice }}</p>
+    </div>
+  </div>
+  <ng-template #noProducts>
+    <p>No product added</p>
+  </ng-template>
+  
